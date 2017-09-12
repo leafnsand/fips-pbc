@@ -1,0 +1,9 @@
+#
+# fips-pbc
+#
+---
+exports:
+    header-dirs: [ pbc ]
+    modules:
+        pbc: .
+
