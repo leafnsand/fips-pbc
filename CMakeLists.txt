@@ -33,6 +33,9 @@ fips_begin_lib(pbc)
         src/wmessage.c
     )
 fips_end_lib()
+if (FIPS_CLANG)
+    set_target_properties(pbc PROPERTIES COMPILE_FLAGS "-Wno-sign-compare")
+endif()
 
 if (NOT FIPS_IMPORT)
     fips_finish()
